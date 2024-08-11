@@ -6,7 +6,7 @@ function testRegex() {
   const resultsElement = document.getElementById('results');
 
   try {
-    const regex = new RegExp(regexPattern, 'g'); // 'g' flag for global search
+    const regex = new RegExp(regexPattern, 'ig'); // 'g' flag for global search and i for case insensetivity 
     const matches = testString.match(regex);
 
     if (matches) {
