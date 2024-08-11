@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Regular Expressions Tester</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Regular Expressions Tester</h1>
+    <form id="regexForm">
+      <label for="testString">Test String:</label>
+      <textarea id="testString" rows="4" placeholder="Enter the text to test..."></textarea>
+      
+      <label for="regexPattern">Regular Expression:</label>
+      <input type="text" id="regexPattern" placeholder="Enter regex pattern...">
+
+      <button type="button" id="testBtn">Test Regular Expression</button>
+    </form>
+    
+    <div id="output">
+      <h3>Matching Results:</h3>
+      <p id="results"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
