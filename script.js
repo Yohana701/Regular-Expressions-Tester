@@ -4,9 +4,12 @@ function testRegex() {
   const testString = document.getElementById('testString').value;
   const regexPattern = document.getElementById('regexPattern').value;
   const resultsElement = document.getElementById('results');
+  const isCaseInsensitive = document.getElementById('caseInsensitive').checked; // Check if case-insensitive flag is set
 
   try {
-    const regex = new RegExp(regexPattern, 'ig'); // 'g' flag for global search and i for case insensetivity 
+    // Create the regex with the appropriate flags
+    const flags = isCaseInsensitive ? 'gi' : 'g'; 
+    const regex = new RegExp(regexPattern, flags);
     const matches = testString.match(regex);
 
     if (matches) {
@@ -14,7 +17,7 @@ function testRegex() {
         `Matches found: <br>${matches.join('<br>')}` : 
         'No matches found.';
     } else {
-      resultsElement.innerHTML = 'Invalid regular expression.';
+      resultsElement.innerHTML = 'No matches found.';
     }
   } catch (e) {
     resultsElement.innerHTML = 'Invalid regular expression.';
